@@ -5,7 +5,7 @@ INPUT="bgp_core_config.txt"
 
 while read -r CONTAINER LOCAL_AS PEER_IP REMOTE_AS DEFAULT_ORIG; do
     [[ "$CONTAINER" =~ ^#.*$ || -z "$CONTAINER" ]] && continue
-
+    DEFAULT_ORIG=$(echo "$DEFAULT_ORIG" | tr -d '\r')
     echo "[*] Configuring BGP on $CONTAINER: peer $PEER_IP AS $REMOTE_AS"
 
     CMD="

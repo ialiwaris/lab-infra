@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-INPUT="/root/core/downlink/downlink.txt"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+INPUT="$SCRIPT_DIR/downlink.txt"
 
 while read -r CONTAINER VETH_HOST VETH_CONT VLAN_PARENT VLAN_ID IP; do
     echo "[*] Configuring downlink for $CONTAINER ($VETH_CONT)"

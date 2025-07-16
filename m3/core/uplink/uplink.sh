@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-INPUT="/root/core/uplink/uplink.txt"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+INPUT="$SCRIPT_DIR/uplink.txt"
 
 while read -r CONTAINER VETH_HOST VETH_CONT BRIDGE IP GATEWAY; do
     echo "[*] Configuring uplink for $CONTAINER"
