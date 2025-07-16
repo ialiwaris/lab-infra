@@ -1,0 +1,13 @@
+# cat /etc/systemd/system/core-network.service
+[Unit]
+Description=Configure uplink and downlink veths for core containers
+After=docker.service
+Wants=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/core-network-setup.sh
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target

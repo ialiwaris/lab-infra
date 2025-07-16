@@ -1,0 +1,120 @@
+services:
+  ksa_jed:
+    image: frrouting/frr
+    container_name: ksa_jed
+    hostname: ksa_jed
+    restart: unless-stopped
+    network_mode: none
+    privileged: true
+    volumes:
+      - ./ksa_jed_frr:/etc/frr
+
+  ksa_dmm:
+    image: frrouting/frr
+    container_name: ksa_dmm
+    hostname: ksa_dmm
+    restart: unless-stopped
+    network_mode: none
+    privileged: true
+    volumes:
+      - ./ksa_dmm_frr:/etc/frr
+
+  ksa_ruh:
+    image: frrouting/frr
+    container_name: ksa_ruh
+    hostname: ksa_ruh
+    restart: unless-stopped
+    network_mode: none
+    privileged: true
+    volumes:
+      - ./ksa_ruh_frr:/etc/frr
+
+  uae_auh:
+    image: frrouting/frr
+    container_name: uae_auh
+    hostname: uae_auh
+    restart: unless-stopped
+    network_mode: none
+    privileged: true
+    volumes:
+      - ./uae_auh_frr:/etc/frr
+
+  uae_shj:
+    image: frrouting/frr
+    container_name: uae_shj
+    hostname: uae_shj
+    restart: unless-stopped
+    network_mode: none
+    privileged: true
+    volumes:
+      - ./uae_shj_frr:/etc/frr
+
+  uae_fjr:
+    image: frrouting/frr
+    container_name: uae_fjr
+    hostname: uae_fjr
+    restart: unless-stopped
+    network_mode: none
+    privileged: true
+    volumes:
+      - ./uae_fjr_frr:/etc/frr
+
+  pak_lhr:
+    image: frrouting/frr
+    container_name: pak_lhr
+    hostname: pak_lhr
+    restart: unless-stopped
+    network_mode: none
+    privileged: true
+    volumes:
+      - ./pak_lhr_frr:/etc/frr
+
+  pak_khi:
+    image: frrouting/frr
+    container_name: pak_khi
+    hostname: pak_khi
+    restart: unless-stopped
+    network_mode: none
+    privileged: true
+    volumes:
+      - ./pak_khi_frr:/etc/frr
+
+  pak_isb:
+    image: frrouting/frr
+    container_name: pak_isb
+    hostname: pak_isb
+    restart: unless-stopped
+    network_mode: none
+    privileged: true
+    volumes:
+      - ./pak_isb_frr:/etc/frr
+
+  usa_ny:
+    image: frrouting/frr
+    container_name: usa_ny
+    hostname: usa_ny
+    restart: unless-stopped
+    network_mode: none
+    privileged: true
+    volumes:
+      - ./usa_ny_frr:/etc/frr
+
+  usa_dc:
+    image: frrouting/frr
+    container_name: usa_dc
+    hostname: usa_dc
+    restart: unless-stopped
+    network_mode: none
+    privileged: true
+    volumes:
+      - ./usa_dc_frr:/etc/frr
+
+  usa_ca:
+    image: frrouting/frr
+    container_name: usa_ca
+    hostname: usa_ca
+    restart: unless-stopped
+    network_mode: none
+    privileged: true
+    volumes:
+      - ./usa_ca_frr:/etc/frr

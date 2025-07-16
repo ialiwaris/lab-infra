@@ -1,0 +1,15 @@
+# cat /etc/systemd/system/metro-network.service
+[Unit]
+Description=Configure uplink veths for metro containers
+After=docker.service
+Requires=docker.service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /root/metro/uplink/uplink.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

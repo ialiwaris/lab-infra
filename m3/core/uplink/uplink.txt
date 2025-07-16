@@ -1,0 +1,4 @@
+ksa_core veth-ksa-inet eth0 br-inet 192.168.10.101/24 192.168.10.1
+uae_core veth-uae-inet eth0 br-inet 192.168.10.102/24 192.168.10.1
+pak_core veth-pak-inet eth0 br-inet 192.168.10.103/24 192.168.10.1
+usa_core veth-usa-inet eth0 br-inet 192.168.10.104/24 192.168.10.1

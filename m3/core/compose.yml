@@ -1,0 +1,40 @@
+services:
+  ksa_core:
+    image: frrouting/frr
+    container_name: ksa_core
+    hostname: ksa_core
+    restart: unless-stopped
+    network_mode: none
+    privileged: true
+    volumes:
+      - ./ksa_frr:/etc/frr
+
+  uae_core:
+    image: frrouting/frr
+    container_name: uae_core
+    hostname: uae_core
+    restart: unless-stopped
+    network_mode: none
+    privileged: true
+    volumes:
+      - ./uae_frr:/etc/frr
+
+  pak_core:
+    image: frrouting/frr
+    container_name: pak_core
+    hostname: pak_core
+    restart: unless-stopped
+    network_mode: none
+    privileged: true
+    volumes:
+      - ./pak_frr:/etc/frr
+
+  usa_core:
+    image: frrouting/frr
+    container_name: usa_core
+    hostname: usa_core
+    restart: unless-stopped
+    network_mode: none
+    privileged: true
+    volumes:
+      - ./usa_frr:/etc/frr
