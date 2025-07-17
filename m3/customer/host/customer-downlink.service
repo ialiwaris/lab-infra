@@ -1,0 +1,13 @@
+[Unit]
+Description=Configure customer downlinks in Docker containers
+After=docker.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/root/lab-infra/m3/customer/downlink/customer_downlink.sh
+WorkingDirectory=/root/lab-infra/m3/customer/downlink
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
