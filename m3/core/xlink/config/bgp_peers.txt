@@ -1,0 +1,16 @@
+# CONTAINER       LOCAL_AS   NEIGHBOR_IP      REMOTE_AS   DESCRIPTION
+ksa_core          65001      172.16.0.2       65002       Xlink to UAE Core
+ksa_core          65001      172.16.0.6       65003       Xlink to PAK Core
+ksa_core          65001      172.16.0.22      65004       Xlink to USA Core
+
+uae_core          65002      172.16.0.1       65001       Xlink to KSA Core
+uae_core          65002      172.16.0.10      65003       Xlink to PAK Core
+uae_core          65002      172.16.0.14      65004       Xlink to USA Core
+
+pak_core          65003      172.16.0.5       65001       Xlink to KSA Core
+pak_core          65003      172.16.0.9       65002       Xlink to UAE Core
+pak_core          65003      172.16.0.18      65004       Xlink to USA Core
+
+usa_core          65004      172.16.0.21      65001       Xlink to KSA Core
+usa_core          65004      172.16.0.13      65002       Xlink to UAE Core
+usa_core          65004      172.16.0.17      65003       Xlink to PAK Core

@@ -1,0 +1,13 @@
+# CONTAINER         VETH_HOST         VETH_CONT   BRIDGE      IP/CIDR           GATEWAY
+ksa_core            vx-ksa-uae        eth10       br-xlink    172.16.0.1/30     172.16.0.2
+uae_core            vx-uae-ksa        eth10       br-xlink    172.16.0.2/30     172.16.0.1
+ksa_core            vx-ksa-pak        eth11       br-xlink    172.16.0.5/30     172.16.0.6
+pak_core            vx-pak-ksa        eth10       br-xlink    172.16.0.6/30     172.16.0.5
+ksa_core            vx-ksa-usa        eth12       br-xlink    172.16.0.21/30    172.16.0.22
+usa_core            vx-usa-ksa        eth10       br-xlink    172.16.0.22/30    172.16.0.21
+uae_core            vx-uae-pak        eth11       br-xlink    172.16.0.9/30     172.16.0.10
+pak_core            vx-pak-uae        eth11       br-xlink    172.16.0.10/30    172.16.0.9
+uae_core            vx-uae-usa        eth12       br-xlink    172.16.0.13/30    172.16.0.14
+usa_core            vx-usa-uae        eth11       br-xlink    172.16.0.14/30    172.16.0.13
+pak_core            vx-pak-usa        eth12       br-xlink    172.16.0.17/30    172.16.0.18
+usa_core            vx-usa-pak        eth12       br-xlink    172.16.0.18/30    172.16.0.17
